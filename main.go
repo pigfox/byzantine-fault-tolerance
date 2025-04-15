@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"time"
 )
 
 const (
@@ -43,8 +42,6 @@ func majorityVote(responses map[int]int) (int, bool) {
 }
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
-
 	// Create nodes (with random Byzantine behavior)
 	nodes := make([]Node, numNodes)
 	for i := 0; i < numNodes; i++ {
